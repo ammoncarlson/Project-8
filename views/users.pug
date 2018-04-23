@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+
+    body
+        //div
+            //Id: users.id
+            //Name: users.name
+            //Email: users.email
+            //Address: users.address
+            //Age: users.age
+            //a(href='/') Add Another User
+        ul
+            each user in users
+                li ID: #{user.id}
+                li Name: #{user.name}
+                li Email: #{user.email}
+                li Address: #{user.address}
+                li Age: #{user.age}
+                ul
+                    a(href=`/edit/${+user.id}`) Edit
+
+        a(href='/') Add Another User
